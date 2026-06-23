@@ -42,7 +42,7 @@ Performs exploratory data analysis on the cleaned and transformed dataset. Inclu
 - Power BI
 
 
-## How to Run
+## How to Run (Recommend Option 1)
 
 ### Option 1
 - Create a catalog "etl_project" in databricks catalog, create a schema "etl_schema ", and create a volume "etl_data", in volume "etl_data" create a folder called "condicionamentos"
@@ -55,6 +55,11 @@ Performs exploratory data analysis on the cleaned and transformed dataset. Inclu
 - Then using Power BI desktop the user can create there own visual insights based on the Data Analysis notebook (the visualisation I created are upload here on the github/pdf upload)
 
 ### Option 2
+- On databricks, click the user icon
+- After click settings and then under __user__ click __linked accounts__
+- Next click the butten __Git Integration__, and link your personal git account
+- Then clone this git repository into your github
+- Finally, in databricks, create a new workspace using a Git Folder
 
 Key Design Decisions
 
