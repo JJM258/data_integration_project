@@ -15,26 +15,6 @@ https://dados.cm-lisboa.pt/tr/dataset/condicionamentos-de-transito-historico
 ### ETL - Data Analysis.ipynb - data analysis and insights
 ### README.md
 
-
-Pipeline Overview
-
-Stage 1 — Extraction (ETL - Extraction.ipynb)
-
-Loads raw data from source files into pandas DataFrames. Performs an initial inspection of shape, data types, and null counts to understand the dataset before any modifications.
-
-Stage 2 — Cleaning (ETL - Cleaning.ipynb)
-
-Handles data quality issues including missing value imputation (median fill for numerics), dropping irrelevant or sparse columns, removing rows with critical nulls, and standardising string casing across key fields.
-
-Stage 3 — Transform (ETL - Transform.ipynb)
-
-Applies feature engineering such as datetime parsing and extraction of year, month, and day components. Converts columns to correct numeric types, renames columns to snake_case, and prepares the dataset for analysis or modelling.
-
-Stage 4 — Data Analysis (ETL - Data Analysis.ipynb)
-
-Performs exploratory data analysis on the cleaned and transformed dataset. Includes descriptive statistics, distribution analysis, and pattern identification across key fields.
-
-
 ## Technological Requirements
 
 - Apache Spark
@@ -61,16 +41,6 @@ Performs exploratory data analysis on the cleaned and transformed dataset. Inclu
 - Then clone this git repository into your github
 - Finally, in databricks, create a new workspace using a Git Folder
 
-Key Design Decisions
-
-
-Median imputation is used for numeric nulls to avoid skewing distributions with mean values.
-Columns with high sparsity (e.g. platform-specific metrics) are dropped to keep the dataset lean and focused on core Spotify features.
-Snake_case column naming is enforced after transformation to ensure consistent, programmatic access across all downstream steps.
-Notebooks are kept stage-isolated — each notebook reads from source and produces clean output, making individual stages easy to debug or rerun independently.
-
-
-
 Author
 
-JJM258****
+__JJM258__
